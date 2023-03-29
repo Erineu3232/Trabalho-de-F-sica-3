@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+
+def camMag(x):                            
+    return (0.05*(r-(0.000064/r)))  
+
+r = np.linspace(0, 0.06, 20)
+B = camMag(r)
+
+plt.plot(r, B)       # gráfico de linha
+plt.plot(r, B, 'o')  # gráfico com pontos
+plt.title("$( r , B(r) )$ coordenadas")
+sns.set()
+plt.show()           # mostra o gráfico
